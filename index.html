@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko-kr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="10진수를 2진수, 8진수, 16진수로 변환해 주는 10진수 변환기입니다.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="formation.js"></script>
     <title>10진수 변환기</title>
 </head>
 <body>
     <script type="text/javascript" src="formation.js"></script>
     <h1>10진수 변환기</h1>
+    <p>10진수를 2진수, 8진수, 16진수로 변환해 주는 10진수 변환기입니다.</p>
+
+    <p>&nbsp;</p>
     <label for="decimalNumber">10진수:</label>
     <input type="text" id="decimalNumber">
     <label for="base">진법:</label>
@@ -30,24 +35,6 @@
     <p>10진수 칸에 변환하고 싶은 숫자를 입력하세요.</p>
     <p>변환하고 싶은 진법을 드롭다운 메뉴에서 선택하세요.</p>
     <p>"변환" 버튼을 누르면, 결과가 즉시 표시됩니다.</p>
-    <script>
-        function convert() {
-            const decimalNumberInput = document.getElementById('decimalNumber');
-            const baseSelect = document.getElementById('base');
-            const resultInput = document.getElementById('result');
-
-            const decimalNumber = parseInt(decimalNumberInput.value, 10);
-            const targetBase = parseInt(baseSelect.value, 10);
-
-            if (isNaN(decimalNumber)) {
-                alert('올바른 숫자를 입력하세요.');
-                return;
-            }
-
-            const result = decimalNumber.toString(targetBase);
-            resultInput.value = result;
-        }
-    </script>
 
 </body>
 </html>
